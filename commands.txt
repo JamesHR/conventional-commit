@@ -30,3 +30,12 @@ git cz
 
 # Solo para reealizar el primer release
 npm run release --first-release
+
+# Para cualquier release
+npm run release
+
+# modificación, release y push
+npm run release-push
+
+(package.json)
+"release-push": "standard-version && git push --follow-tags origin main"
