@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "release": "standard-version",
-    "release-push": "standard-version && git push --follow-tags origin main"
+    "release-push": "standard-version && git push --follow-tags origin main",
+    "hello": "Hola mundo"
   },
   "keywords": [],
   "author": "",
@@ -20,12 +21,12 @@
     "husky": "^9.1.1",
     "standard-version": "^9.5.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "workspaces": [
     "packages/monorepo-app1"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }

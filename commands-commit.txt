@@ -1,3 +1,5 @@
+# Este proceso debe repetirse en cada submodulo ya que c/u es un repo independiente
+
 npm init -y
 
 (package.json)
@@ -15,6 +17,13 @@ echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
 
 npm install -g commitizen
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
+
+# verificar, si no aparece agregar manualmente (package.json)
+"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+}
 
 npm i --save-dev standard-version
 
