@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/JamesHR/conventional-commit/compare/v1.1.1...v1.2.0) (2024-07-23)
+
+
+### Features
+
+* add release-push script ([2a86400](https://github.com/JamesHR/conventional-commit/commit/2a8640080b4f74913a52e2416d90fdad8dbc4939))
+
 ### [1.1.1](https://github.com/JamesHR/conventional-commit/compare/v1.1.0...v1.1.1) (2024-07-23)
 
 ## 1.1.0 (2024-07-23)
