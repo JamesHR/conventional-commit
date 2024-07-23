@@ -1,0 +1,3 @@
+[submodule "packages/monorepo-app1"]
+	path = packages/monorepo-app1
+	url = git@github.com:JamesHR/morepo-app1.git
