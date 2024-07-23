@@ -1,13 +1,14 @@
 {
   "name": "conventional-commit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Repositorio de prueba para implementación de Conventional Commits",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "release": "standard-version"
+    "release": "standard-version",
+    "release-push": "standard-version && git push --follow-tags origin main"
   },
   "keywords": [],
   "author": "",
