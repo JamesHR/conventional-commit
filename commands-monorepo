@@ -1,0 +1,44 @@
+https://medium.com/@luis.olivag/desbloquea-el-potencial-de-git-con-subm%C3%B3dulos-separa-c%C3%B3digo-despliegues-configuraciones-sin-la-1726ee4c3814
+
+# Enlace a repos secundarios
+git submodule add [URL] [PATH]
+
+(.gitmodules)
+[submodule "source"]
+    path = source
+    url = https://github.com/tu-organizacion/source.git
+
+# Confirmar cambios
+git add .gitmodules source deploy config terraform
+git commit -m "Add submodules for source, deploy, config, and terraform"
+git push
+
+
+# Clonar repo principal con submodulos
+git clone --recurse-submodules https://github.com/tu-organizacion/proyecto.git
+
+# Actualizar submodulos
+git submodule update --remote
+
+
+# Seleccionar submodulos específicos
+git clone https://github.com/tu-organizacion/proyecto.git
+cd proyecto
+git submodule init source deploy
+git submodule update source deploy
+
+
+# NPM Workspaces
+https://www.paradigmadigital.com/dev/monorepositorios-npm-workspaces/
+
+# Modificar raiz (package.json)
+"workspaces":[
+    "api",
+    "app"
+],
+
+# Todo repo debe tener el modulo package.json (si no ha sido inicializado)
+npm init -y
+
+# Toda isntalación será compartida desde el repo raiz mientras coincida
+npm i [PACKAGE]
