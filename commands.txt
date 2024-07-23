@@ -1,0 +1,32 @@
+npm init -y
+
+(package.json)
+"type": "module"
+
+npm install --save-dev @commitlint/{cli,config-conventional}
+echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
+echo "Commit erróneo" | npx commitlint
+
+
+npm install --save-dev husky
+npx husky init
+rm .husky/pre-commit
+echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
+
+npm install -g commitizen
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+
+npm i --save-dev standard-version
+
+(package.json)
+{   
+    "scripts": {
+        "release": "standard-version"
+    }
+}
+
+# Hacer commits
+git cz
+
+# Solo para reealizar el primer release
+npm run release --first-release
